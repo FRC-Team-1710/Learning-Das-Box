@@ -47,8 +47,8 @@ public class Robot extends TimedRobot {
 
     m_driverController.x().onTrue(
         new RunCommand(() -> {
-          motorA.setControl(m_motorOutput.withOutput(0.08));
-          motorB.setControl(m_motorOutput.withOutput(0.08));
+          motorA.setControl(m_motorOutput.withOutput(0.1));
+          motorB.setControl(m_motorOutput.withOutput(0.5));
         })
         .withTimeout(5.0)
         .andThen(new InstantCommand(this::stopMotors))
